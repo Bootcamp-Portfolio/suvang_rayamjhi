@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins' sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background: #040303;
+    color: rgb(235, 226, 226);
+}
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/su.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.container{
+    padding: 10px 10%;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    flex-wrap:wrap;
+
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+nav ul li a{
+    color:#bd11f6;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+
+}
+nav ul li a::after{
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+width: 100%;
+}
+.header-text {
+    margin-top: 20%;
+    font-size: 30px;
+
+}
+.header-text h1{
+    font-size: 60px;
+    margin-top: 20px;
+}
+.header-text h1 span{
+    color: #ff004f;
+}
+#about{
+    padding: 80px 0;
+    color: #bd11f6;
+
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+.about-col-1 img{
+    
+    width: 80%;
+    border-radius: 40px;
+    position: relative;
+    left: 350px;
+    top: 350px;
+
+}
+.about-col-2{
+    flex-basis: 60%;
+    justify-content: center;
+    position:relative;
+    left: 350px;
+    top: 350px;
+    
+}
+.subtitle{
+    font-size: 60px;
+    font-weight: 600;
+    color: aqua;
+}
+.tab-title{
+    display: flex;
+    margin: 30px 0 40px;
+
+
+}
+.tab-link{
+    margin: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-link::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: rgb(196, 237, 14);
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-link.active-link::after {
+    width: 100%;
+}
+.tab-contents{
+    list-style: none;
+    margin: 10px 0;
+}
+.tab-contents ul li span{
+    color: rgba(63, 3, 181, 0.653);
+    font-size: 20px;
+}
