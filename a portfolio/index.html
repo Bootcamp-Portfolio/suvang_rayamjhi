@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal portfolio website</title>
     <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
     <div id="header">
         <div class="container">
             <nav>
-                <img src="images/log.png" class="logo" width="25%" height="25%">
+                <img src="images/log.png" class="logo" width="15%" height="10%">
                 <ul>
                     <li><a href="#">Home</a></li>
                     <li><a href="#">About</a></li>
@@ -21,11 +22,12 @@
                 </ul>
             </nav>
             <div class="header-text">
-            <p>Professional Front Web Developer</p>
-            <h1>Hi,I am  <span>Suvang Rayamajhi</span> <br>from heaven</h1>
+            <p>Professional Front Web Developer</p><br>
+            <h3>Hi,I am </h3><br><h1> <span>Suvang Rayamajhi</span> </h1><br>from heaven
 
         </div>
 
+    </div>
     </div>
     <br>
 
@@ -36,31 +38,47 @@
             <div class="row">
                 <div class="about-col-1">
                     <img src="images/sau.jpg"  >
-                </div>
                 <div class="about-col-2">
-                    <h1 class="subtitle">About me</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, voluptatibus laborum at alias veritatis vitae necessitatibus odit dolore sequi molestiae ratione, placeat aspernatur aperiam, recusandae deleniti. Officia ullam voluptate ducimus.</p>
+                    <h1 class="subtitle">About me</h1> <br>
+                    <p class="about-me">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, voluptatibus laborum at alias veritatis vitae necessitatibus odit dolore sequi molestiae ratione, placeat aspernatur aperiam, recusandae deleniti. Officia ullam voluptate ducimus.</p>
+
 <div class="tab-title">
-    <p class="tab-link active-link">Skills</p>
-    <p class="tab-link">Education</p>
-    <p class="tab-link">Experince</p>
-</div>
-<div class="tab-contents">
-    <ul>
-        <li><span>Digital Marketing</span><br>fgfkfkuyfkfku</li>
-        <li><span>Project Manager</span><br>asdfghjkl</li>
-        <li><span>Web Developer</span><br>esdcvgbjhnkjmk</li>
-    </ul>
-</div>
-            
+        <p class="tab-link active-link" onclick="showTab('skills')">Skills</p>
+        <p class="tab-link" onclick="showTab('education')">Education</p>
+        <p class="tab-link" onclick="showTab('experience')">Experience</p>
+    </div>
+    <div class="tab-contents">
+        <div id="skills" class="tab-content active-tab">
+            <ul>
+                <li><span>Digital Marketing</span><br>Content for Skills 1</li>
+                <li><span>Project Manager</span><br>Content for Skills 2</li>
+                <li><span>Web Developer</span><br>Content for Skills 3</li>
+            </ul>
+        </div>
+        <div id="education" class="tab-content">
+            <ul>
+                <li><span>Education 1</span><br>Content for Education 1</li>
+                <li><span>Education 2</span><br>Content for Education 2</li>
+                <li><span>Education 3</span><br>Content for Education 3</li>
+            </ul>
+        </div>
+        <div id="experience" class="tab-content">
+            <ul>
+                <li><span>Experience 1</span><br>Content for Experience 1</li>
+                <li><span>Experience 2</span><br>Content for Experience 2</li>
+                <li><span>Experience 3</span><br>Content for Experience 3</li>
+            </ul>
+        </div>
+    </div>
+
+                     
                 </div>
             </div>
         </div>
 
     </div>
+</div>
     <!-- ---------------abouter---------------- -->
-
-
-    
+    <script src="script.js"></script>
 </body>
 </html>

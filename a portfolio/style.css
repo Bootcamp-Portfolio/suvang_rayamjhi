@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: 'poppins' sans-serif;
+    font-family: 'poppins', sans-serif;
     box-sizing: border-box;
 }
 
@@ -24,35 +24,42 @@ body{
 nav{
     display: flex;
     align-items: center;
-    justify-content:space-between;
-    flex-wrap:wrap;
-
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
+
+nav a {
+    flex-grow: 1;
+    text-align: center;
+    margin: 5px; /* Optional: Add some spacing between the links */
+  }
 
 nav ul li {
     display: inline-block;
     list-style: none;
+    /* font-size: 18px; */
     margin: 10px 20px;
 }
 nav ul li a{
-    color:#bd11f6;
+    color: #fff;
     text-decoration: none;
     font-size: 18px;
     position: relative;
-
 }
+
 nav ul li a::after{
     content: '';
-    width: 0%;
+    width: 0;
     height: 3px;
     background: #ff004f;
     position: absolute;
     left: 0;
-    bottom: -6px;
-    transition: 0.5s;
+    bottom: -5px;
+    transition: 0.5s;     /* transistion helps to under line come slowly for button */
 }
 nav ul li a:hover::after{
-width: 100%;
+    width: 100%;
+    
 }
 .header-text {
     margin-top: 20%;
@@ -61,7 +68,7 @@ width: 100%;
 }
 .header-text h1{
     font-size: 60px;
-    margin-top: 20px;
+
 }
 .header-text h1 span{
     color: #ff004f;
@@ -73,31 +80,38 @@ width: 100%;
 }
 .row{
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
 
 }
+.about {
+    margin-top: 3%;
+}
 .about-col-1 img{
-    
-    width: 80%;
+    width: 30%;
     border-radius: 40px;
     position: relative;
-    left: 350px;
-    top: 350px;
+    margin-left: auto;
+
 
 }
 .about-col-2{
-    flex-basis: 60%;
+    width:80%;
+
     justify-content: center;
     position:relative;
-    left: 350px;
-    top: 350px;
+
+
     
 }
 .subtitle{
     font-size: 60px;
     font-weight: 600;
-    color: aqua;
+    color: #ff004f;
+}
+.about-me{
+    font-size: 30px;
+
+
 }
 .tab-title{
     display: flex;
@@ -129,7 +143,52 @@ width: 100%;
     list-style: none;
     margin: 10px 0;
 }
-.tab-contents ul li span{
-    color: rgba(63, 3, 181, 0.653);
+
+.tab-contents ul {
+    list-style: none;
+    padding: 0;
+}
+
+.tab-contents li {
+     /* Add a 10-pixel border to the bottom of each list item */
+    padding: 10px 0;
+}
+
+.tab-contents li:last-child {
+    border-bottom: none; /* Remove the border from the last list item to avoid a double border */
+}
+.tab-contents span{
+    color: #ff004f;
     font-size: 20px;
+    margin-top:50px;
+
+}
+
+/* Your existing CSS styles here */
+
+.tab-content {
+    display: none;
+}
+
+.active-tab {
+    display: block;
+}
+
+.tab-contents {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: hidden;
+    transition: transform 0.3s ease;
+}
+
+.show-skills {
+    transform: translateX(0);
+}
+
+.show-education {
+    transform: translateX(-100%);
+}
+
+.show-experience {
+    transform: translateX(-200%);
 }
